@@ -23,7 +23,8 @@ create table Oferta (
 create table usuario (
     user_id_ SERIAL not null,
     user_nome VARCHAR not null,
-    user_hbd date not null, 								
+    user_token varchar(200),
+    user_pass varchar(200) not null, 								
     user_email varchar NOT null UNIQUE,
     user_oferta_id int ,
     user_transacao_id int ,							
