@@ -10,7 +10,7 @@ async function checkAuthenticated(verbose) {
     try {
         let result = await requestProfile();
         if (result.unauthenticated)
-            changePage("index.html","Not authenticated. Going to login page",verbose);
+            changePage("Login.html","Not authenticated. Going to login page",verbose);
         else if (!result.successful || result.err) 
             throw err || "Not successful";
         else window.user = result.user;

@@ -22,6 +22,9 @@ const saltRounds = 10;
                 this.id = id;
                 this.name = name;
                 this.pass = pass;
+                this.email = email;
+                this.oferta = oferta;
+                this.transacao = transacao;
                 this.token = token;
             }
             export() {
@@ -50,7 +53,7 @@ const saltRounds = 10;
     static async register(user) {
         try {
             let dbResult =
-                await pool.query("Select * from appuser where usr_name=$1", [user.email]);
+                await pool.query("Select * from appuser where usr_email=$1", [user.email]);
             let dbUsers = dbResult.rows;
             if (dbUsers.length)
                 return {

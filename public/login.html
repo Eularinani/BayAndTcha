@@ -5,33 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-      <script src="./javascripts/utils/verifications.js"></script>
-      <script src="./javascripts/requests/usersRequests.js"></script>
-      <script src="./javascripts/login.js"></script>
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+      <script src="/public/javascripts/requests/userRequests.js"></script>
+      <script src="javascripts/requests/usersRequests.js"></script>
+      <script src="/public/javascripts/login.js"></script>
 </head>
 <body>
-    <div class="conteiner">
-        <div class="buttonsform">
-        <div class="btcolor"> </div>
-        <button id="Loguin">Loguin</button>
-        <button id="logui Out">Logui Out</button>
+    <div class="container">
+      <div class="buttonsForm">
+        <div class="btnColor"></div>
+        <button id="btnEntrar">Entra</button>
+        <button id="btnCadastro">Cadastros</button> 
         </div>
-        <form id="signin">
-            <input type="text" placeholder="Email" required />
+
+        <form id="Entrar">
+            <input type="text" autocomplete="email" placeholder="Email" id="Email" required />
             <i class="fas fa-envelope iEmail"></i>
-            <input type="password" placeholder="Password" required />
+            <input type="password" autocomplete="current-password" placeholder="Password" id="Passe" required />
             <!--icon de cadeado -->
             <i class="fas fa-lock iPassword"></i>
-            <div class="divCheck">
-              <input type="checkbox" />
-              <span>Remember Password</span>
-            </div>
-            <button type="submit">Sign in</button>
+            <button type="submit">Entrar</button>
           </form>
 
 
-          <form id="signup">
+          <form id="Cadastros">
             <input type="text" placeholder="Email" required />
             <i class="fas fa-envelope iEmail"></i>
             <input type="password" placeholder="Password" required />
@@ -45,8 +43,9 @@
             <button type="submit">Sign up</button>
           </form>
         </div>
+      
     </div>
-    <script src="login.js"> </script>
+    <script src="/public/login.js"> </script>
 </body>
 </html>
 
